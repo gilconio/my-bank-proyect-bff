@@ -1,4 +1,4 @@
-const getCustomerModule = require('../modules/get-customer.module');
+const getCustomerModule = require('../modules/get-customers.module');
 
 const getCustomer = async (req, res) => {    
     const result = await getCustomerModule.getCustomer();

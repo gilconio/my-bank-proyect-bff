@@ -2,8 +2,9 @@
 const { Router } = require('express');
 const { check } = require('express-validator');
 const { postCustomer } = require('../controllers/create-customers.controller');
-const { getCustomer } = require('../controllers/get-customers.controller');
 const { makeTransfer } = require('../controllers/make.transfer.controller');
+const { getCustomer } = require('../controllers/get-customers.controller');
+const { getCustomerTransfer } = require('../controllers/get-customers-transfer.controller');
 const { validateFields } = require('../middlewares/validate-fields');
 const { existEmail } = require('../utils/db-validators');
 const router = Router();
@@ -20,6 +21,7 @@ router.post('/', [
     validateFields
 ,postCustomer);
 router.post('/transferir', makeTransfer);
+router.get('/historial-transferencias', getCustomerTransfer);
 router.get('/', getCustomer);
 
 
