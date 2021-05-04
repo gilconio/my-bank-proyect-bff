@@ -1,15 +1,12 @@
 
 const { Router } = require('express');
-
-const { getUsers,
-        postUser } = require('../controllers/usuarios');
-
+const { postCustomer } = require('../controllers/customer/customers.controller');
 const router = Router();
 
 
-router.get('/', getUsers );
+/* router.get('/', getUsers ); */
 
-router.post('/', postUser );
+router.post('/', postCustomer );
 
 
 
