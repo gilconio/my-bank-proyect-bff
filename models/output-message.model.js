@@ -17,6 +17,10 @@ class OutputMessage {
     internalServerError() {
         return new OutputMessage(500, "Internal Error", undefined);
     }
+
+    badRequest(){
+        return new OutputMessage(400, "Bad request", undefined);
+    }
 }
 
 module.exports = {
