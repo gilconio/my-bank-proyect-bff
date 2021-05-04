@@ -1,8 +1,8 @@
 
 const { Router } = require('express');
 const { check } = require('express-validator');
-const { postCustomer } = require('../controllers/create-customer/create-customers.controller');
-const { makeTransfer } = require('../controllers/make-transfer/make.transfer.controller');
+const { postCustomer } = require('../controllers/create-customers.controller');
+const { makeTransfer } = require('../controllers/make.transfer.controller');
 const { validateFields } = require('../middlewares/validate-fields');
 const { existEmail } = require('../utils/db-validators');
 const router = Router();

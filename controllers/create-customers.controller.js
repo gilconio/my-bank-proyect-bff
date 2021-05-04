@@ -1,4 +1,4 @@
-const customerModule = require('./create-customer.module');
+const customerModule = require('../modules/create-customer.module');
 
 const postCustomer = async (req, res) => {    
     const result = await customerModule.postCustomer(req.body);

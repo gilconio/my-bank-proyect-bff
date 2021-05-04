@@ -1,5 +1,5 @@
-const User = require('../../models/user-bank');
-const { OutputMessage } = require("../../models/output-message.model");
+const User = require('../models/user-bank');
+const { OutputMessage } = require("../utils/output-message.model");
 const message = new OutputMessage();
 
 const postCustomer = async (customer) => {

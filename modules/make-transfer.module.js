@@ -1,5 +1,5 @@
-const Transfer = require('../../models/wire-transfer');
-const { OutputMessage } = require("../../models/output-message.model");
+const Transfer = require('../models/wire-transfer');
+const { OutputMessage } = require("../utils/output-message.model");
 const message = new OutputMessage();
 
 const setAmount = async (amount) => {
