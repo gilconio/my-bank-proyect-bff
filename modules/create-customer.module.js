@@ -6,11 +6,8 @@ const postCustomer = async (customer) => {
 
     try {
         const { rut, nombre, correo, telefono, banco, tipocuenta, ncuenta } = customer;
-
-        const usuario = new User({ rut, nombre, correo, telefono, banco, tipocuenta, ncuenta });        
-
+        const usuario = new User({ rut, nombre, correo, telefono, banco, tipocuenta, ncuenta });   
         await usuario.save();
-
         return message.success(usuario);
 
     } catch (error) {

@@ -2,25 +2,19 @@ const { Schema, model } = require('mongoose');
 
 const TransferFieldsSchema = Schema({
     nombre: {
-        type: String,
-        required: [true, 'El rut es requerido']
+        type: String
     },
     rut: {
-        type: String,
-        required: [true, 'El nombre es requerido']
+        type: String
     },
     banco: {
-        type: String,
-        required: [true, 'El correo es requerido'],
-        unique: true
+        type: String
     },
     tipocuenta: {
-        type: String,
-        required: [true, 'El telefono es requerido']
+        type: String
     },
     monto: {
-        type: String,
-        required: [true, 'El monto es requerido']
+        type: String
     }
 })
 

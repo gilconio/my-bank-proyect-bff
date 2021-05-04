@@ -2,17 +2,17 @@ const Transfer = require('../models/wire-transfer');
 const { OutputMessage } = require("../utils/output-message.model");
 const message = new OutputMessage();
 
-const setAmount = async (amount) => {
+const getCustomer = async () => {
     try {
-        const transfer = new Transfer(amount);
-        await transfer.save();
-        return message.success(transfer);
-        
+        const customers = await Transfer.find();
+        console.log(customers);
+        return message.success(customers);
+
     } catch (error) {
         return message.internalServerError();
     }
 }
 
 module.exports = {
-    setAmount
+    getCustomer
 }

@@ -2,13 +2,11 @@
 const { Router } = require('express');
 const { check } = require('express-validator');
 const { postCustomer } = require('../controllers/create-customers.controller');
+const { getCustomer } = require('../controllers/get-customers.controller');
 const { makeTransfer } = require('../controllers/make.transfer.controller');
 const { validateFields } = require('../middlewares/validate-fields');
 const { existEmail } = require('../utils/db-validators');
 const router = Router();
-
-
-/* router.get('/', getUsers ); */
 
 router.post('/', [
     check('rut', 'El rut es obligatorio').not().isEmpty(),
@@ -21,8 +19,8 @@ router.post('/', [
     check('ncuenta', 'El número de cuenta es obligatorio').not().isEmpty(),], 
     validateFields
 ,postCustomer);
-
 router.post('/transferir', makeTransfer);
+router.get('/', getCustomer);
 
 
 
